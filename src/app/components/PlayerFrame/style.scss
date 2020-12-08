@@ -1,0 +1,41 @@
+@import url('../../constants/color-scheme.scss');
+
+.player-frame-container {
+  height: 540px;
+  display: flex;
+  flex-direction: row;
+  background-color: $gray-500;
+  border: 10px solid $gray-500;
+
+  & .player-frame-display {
+    width: 540px;
+    height: 540px;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    border-top: 7px solid $gray-800;
+    border-bottom: 7px solid $gray-800;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  & .player-frame-column {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 7px solid $gray-800;
+    padding: 10px 0;
+
+    & .player-frame-slot {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
