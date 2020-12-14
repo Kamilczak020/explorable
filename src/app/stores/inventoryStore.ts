@@ -1,6 +1,7 @@
-import { observable, action } from 'mobx';
 import { RootStore } from './rootStore';
-import { IEquipInventory, IInventorySlot, IEquippableItem, IGameItem } from '../interfaces';
+import { observable, action } from 'mobx';
+import { IEquipInventory, IInventorySlot } from '../interfaces';
+import { IEquippableItem, IGameItem } from '../models';
 import { clamp } from '../util';
 
 export class InventoryStore {
@@ -14,6 +15,10 @@ export class InventoryStore {
   public constructor(root: RootStore) {
     this.root = root;
     this.generalInventory = observable([]);
+    for (let index = 0; index < 20; index++) {
+      this.generalInventory.push(null);
+    }
+
     this.equipInventory = {
       head: null,
       chest: null,
@@ -36,7 +41,7 @@ export class InventoryStore {
 
   @action
   public removeItem(itemID: string, quantity: number) {
-    const targetSlot = this.generalInventory.find((slot) => slot.content.id === itemID);
+    const targetSlot = this.generalInventory.find((slot) => slot.content.itemID === itemID);
     if (targetSlot.quantity <= quantity) {
       targetSlot.content = null;
     }

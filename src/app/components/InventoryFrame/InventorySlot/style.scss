@@ -1,0 +1,12 @@
+@import url('../../../constants/color-scheme.scss');
+
+.inventory-slot-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $gray-800;
+  padding: 10px;
+}

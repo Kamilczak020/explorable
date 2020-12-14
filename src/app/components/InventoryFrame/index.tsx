@@ -7,12 +7,14 @@ export const InventoryFrame = () => {
   const { inventoryStore } = useStores();
 
   const inventorySlots = inventoryStore.generalInventory.map((slot, index) => (
-    <InventorySlot key={`slot-${index}`} content={slot.content} quantity={slot.quantity} />
+    <InventorySlot key={`slot-${index}`} content={slot?.content} quantity={slot?.quantity} />
   ));
 
   return (
     <div className="inventory-frame-container">
-      {inventorySlots}
+      <div className="inventory-frame-inner">
+        {inventorySlots}
+      </div>
     </div>
   );
 }

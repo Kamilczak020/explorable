@@ -10,6 +10,9 @@ export interface IGameItemConfig extends TGameItemConfig { }
 type TEquippableItemConfig = t.TypeOf<typeof TEquippableItem>;
 export interface IEquippableItemConfig extends TEquippableItemConfig { }
 
+type TGearConfig = t.TypeOf<typeof TGear>;
+export interface IGearConfig extends TGearConfig { }
+
 const gearType = createEnum<GearType>(GearType, 'GearType');
 
 const TGearProps = t.type({
@@ -20,7 +23,7 @@ const TGearProps = t.type({
 });
 
 export const TGameItem = t.type({
-  id: t.string,
+  itemID: t.string,
   value: t.number,
   icon: t.string,
 });
@@ -29,3 +32,7 @@ export const TEquippableItem = t.intersection([
   TGameItem,
   TGearProps,
 ]);
+
+export const TGear = t.type({
+  items: t.array(TEquippableItem),
+});

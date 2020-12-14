@@ -23,6 +23,7 @@
     "no-any": false,
     "strict-boolean-expressions": false,
     "no-null-keyword": false,
-    "interface-name": false
+    "interface-name": false,
+    "increment-decrement": false
   }
 }

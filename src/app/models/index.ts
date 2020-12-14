@@ -1,1 +1,2 @@
-export * from './inventory';
+export * from './gameItem';
+export * from './equippableItem';

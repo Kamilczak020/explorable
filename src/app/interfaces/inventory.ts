@@ -1,4 +1,4 @@
-import { IEquippableItem, IGameItem } from '../interfaces';
+import { IEquippableItem, IGameItem } from '../models';
 
 export interface IEquipInventory {
   head: IEquippableItem;
