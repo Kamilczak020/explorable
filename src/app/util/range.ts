@@ -1,3 +1,5 @@
+import { Random } from './random';
+
 export class Range {
   public readonly min: number;
   public readonly max: number;
@@ -8,7 +10,7 @@ export class Range {
   }
 
   public getRandomValue() {
-    return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+    return Random.inRange(this.min, this.max);
   }
 
   public getSpread() {

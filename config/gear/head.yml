@@ -1,0 +1,7 @@
+items:
+- itemID: 'leather_cap'
+  name: 'Leather Cap'
+  rarity: 0:2
+  image: 'head-3.png'
+  value: 10
+  

@@ -1,0 +1,50 @@
+prefix:
+  - name: Rugged
+    baseModifier: -5
+    statModifiers: []
+    gearClasses:
+      - armor
+    materials:
+      - leather
+      -  cloth
+    rarities:
+      - common
+
+  - name: Torn
+    baseModifier: -3
+    statModifiers: []
+    gearClasses:
+      - armor
+    materials:
+      - leather
+      - cloth
+    rarities:
+      - common
+
+  - name: Worn
+    baseModifier: -2
+    statModifiers: []
+    gearClasses:
+      - armor
+      - weapon
+    materials:
+      - leather
+      - cloth
+    rarities:
+      - common
+  
+  - name: Simple
+    baseModifier: 0
+    statModifiers:
+      - stat: dexterity
+        value: 1
+    gearClasses:
+      - armor
+      - weapon
+    materials:
+      - leather
+      - cloth
+      - metal
+    rarities:
+      - common
+      - uncommon

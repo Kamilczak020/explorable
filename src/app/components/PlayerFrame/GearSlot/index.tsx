@@ -27,7 +27,6 @@ export const GearSlot: React.FC<GearSlotProps> = (props) => {
             style={{ backgroundImage: `url('../../../../assets/images/inventory/${props.type}.svg')` }}
             {...provided.placeholder}
           >
-
           </div>
         )}
       </Droppable>
